@@ -23,8 +23,8 @@ body {
   background: white;
   width: 720px;
   min-height: 200px;
-  border-radius: 1rem;
-  box-shadow: 3px 3px 10px gray;
+  border-radius: 0.6rem;
+  box-shadow: 2px 2px 6px gray;
 }
 
 .left-side-image {
@@ -32,7 +32,7 @@ body {
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 0.6rem 0 0 0.6rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -50,7 +50,7 @@ body {
 }
 
 .right-side-content__description {
-  color: hsl(217, 19%, 35%);
+  color: hsl(214, 17%, 51%);
   font-weight: 500;
   padding: 1rem 0;
 }
@@ -67,8 +67,8 @@ body {
 }
 
 .avatar__image {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
 }
 
@@ -85,7 +85,7 @@ body {
 }
 
 .about__date {
-  color: hsl(217, 19%, 35%);
+  color: hsl(214, 17%, 51%);
   font-weight: 500;
 }
 
@@ -109,7 +109,7 @@ body {
   top: -66px;
   right: -97px;
   padding: 0.8rem 2.5rem;
-  border-radius: 10px;
+  border-radius: 0.6rem;
   background: hsl(217, 19%, 35%);
   box-shadow: 3px 3px 10px gray;
   color: white;
@@ -164,9 +164,11 @@ body {
   .card {
     position: relative;
     margin: 20px;
+    margin-top: 0;
     grid-template-columns: 1fr;
     grid-template-rows: 1.75fr 2fr;
   }
+
   .right-side-content {
     padding: 0;
   }
@@ -176,7 +178,7 @@ body {
   }
 
   .left-side-image {
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 0.6rem 0.6rem 0 0;
   }
 
   .info-autor {
@@ -194,7 +196,9 @@ body {
   }
 
   .right-side-content__description {
-    padding: 0 30px 30px 30px;
+    padding: 0 30px 20px 30px;
+    line-height: 1.4;
+    letter-spacing: 1px;
   }
 
   .info-author__share-active {
@@ -202,7 +206,7 @@ body {
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem 1.88rem;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
