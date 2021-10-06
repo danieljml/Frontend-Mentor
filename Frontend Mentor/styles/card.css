@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 13px;
+  position: relative !important;
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1.36fr 2fr;
+  background: white;
+  width: 720px;
+  min-height: 200px;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 10px gray;
+}
+
+.left-side-image {
+  background-image: url("../images/drawers.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem 0 0 1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.right-side-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.right-side-content__title {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.right-side-content__description {
+  color: hsl(217, 19%, 35%);
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+.info-autor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-author__avatar {
+  display: flex;
+}
+
+.avatar__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.info-author__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.about__name {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.about__date {
+  color: hsl(217, 19%, 35%);
+  font-weight: 500;
+}
+
+.share-active__share {
+  color: hsl(212, 23%, 69%);
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-right: 0.5rem;
+}
+
+.share-active__icons {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.info-author__share-active {
+  display: flex !important;
+  align-items: center;
+  position: absolute;
+  top: -66px;
+  right: -97px;
+  padding: 0.8rem 2.5rem;
+  border-radius: 10px;
+  background: hsl(217, 19%, 35%);
+  box-shadow: 3px 3px 10px gray;
+  color: white;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.share-active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.info-author__share-active::before {
+  content: "";
+  position: absolute;
+  left: 47%;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid hsl(217, 19%, 35%);
+  clear: both;
+}
+
+.info-author__share-active .share-active__twitter,
+.share-active__facebook,
+.share-active__pinterest {
+  width: 16px;
+  height: 16px;
+  padding: 0 0.4rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.info-author__share {
+  border-radius: 50%;
+  cursor: pointer;
+  background: hsl(210, 46%, 95%);
+  padding: 6px;
+  transition: all 0.8s ease;
+}
+
+.info-author__share:hover {
+  background: hsl(210, 4%, 90%);
+}
+
+@media screen and (max-width: 720px) {
+  .card {
+    position: relative;
+    margin: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.75fr 2fr;
+  }
+  .right-side-content {
+    padding: 0;
+  }
+
+  .left-side-image {
+    background-position: top;
+  }
+
+  .left-side-image {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .info-autor {
+    position: none;
+    margin-top: 1rem;
+    padding: 0 30px 30px 30px;
+  }
+
+  .right-side-content {
+    padding: 0;
+  }
+
+  .right-side-content__title {
+    padding: 30px;
+  }
+
+  .right-side-content__description {
+    padding: 0 30px 30px 30px;
+  }
+
+  .info-author__share-active {
+    top: -30px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1.2rem 1.5rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .info-author__share-active::before {
+    display: none;
+  }
+
+  .info-author__share {
+    z-index: 2;
+  }
+}
